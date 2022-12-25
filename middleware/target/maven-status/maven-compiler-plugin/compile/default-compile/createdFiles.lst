@@ -1,2 +1,9 @@
+smart\garbage\cot\entities\FieldPropertyVisibilityStrategy.class
 smart\garbage\cot\boundaries\HelloWorld.class
+smart\garbage\cot\controllers\MqttMessageEventManager.class
 smart\garbage\cot\JaxRSActivator.class
+smart\garbage\cot\boundaries\PublishWebsocketEndpoint.class
+smart\garbage\cot\boundaries\SensorJSONDecoder.class
+smart\garbage\cot\controllers\MqttMessageEventManager$1.class
+smart\garbage\cot\boundaries\SensorJSONEncoder.class
+smart\garbage\cot\entities\Sensor.class
