@@ -1,8 +1,12 @@
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\entities\FieldPropertyVisibilityStrategy.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\boundaries\PublishWebsocketEndpoint.java
+C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\boundaries\SensorDBEndpoint.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\entities\Sensor.java
+C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\entities\SensorDB.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\JaxRSActivator.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\boundaries\SensorJSONDecoder.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\controllers\MqttMessageEventManager.java
+C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\DocumentManagerProducer.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\boundaries\SensorJSONEncoder.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\boundaries\HelloWorld.java
+C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\repositories\SensorDBRepository.java

@@ -7,7 +7,7 @@ import java.util.*;
 import smart.garbage.cot.entities.Sensor;
 import smart.garbage.cot.controllers.MqttMessageEventManager;
 
-@ServerEndpoint(value = "/pushes", encoders = {SensorJSONEncoder.class}, decoders = {SensorJSONDecoder.class})
+@ServerEndpoint(value = "/pushes", encoders = {SensorJSONEncoder.class}, decoders = {SensorJSONDecoder.class}) //Annotates path for websocket and with the json encoders and decoders
 public class PublishWebsocketEndpoint {
     @EJB
     private MqttMessageEventManager mqttlistener;
@@ -28,5 +28,14 @@ public class PublishWebsocketEndpoint {
         sessions.put(session.getId(), session); //add the new session
 
     }
+    @OnClose
+    public void onClose(Session session, CloseReason reason){
+        sessions.remove(session); // delete sessions when client leave
+    }
+    @OnError
+    public void onError(Session session, Throwable error){
+        System.out.println("Push WebSocket error for ID " + session.getId() + ": " + error.getMessage());
+    }
+
 
 }

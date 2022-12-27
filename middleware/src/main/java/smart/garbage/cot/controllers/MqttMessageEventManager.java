@@ -16,7 +16,7 @@ import smart.garbage.cot.boundaries.PublishWebsocketEndpoint;
 import org.eclipse.microprofile.config.Config;
 import org.eclipse.microprofile.config.ConfigProvider;
 @Startup
-@Singleton
+@Singleton // With singleton and startup annotations, you can launch a function on server startup
 public class MqttMessageEventManager {
     public static int qos           = 1;
     public static String topic      = "test";
@@ -28,7 +28,7 @@ public class MqttMessageEventManager {
     private final String broker = config.getValue("mqtt.broker.broker",String.class); // URI of the MQTT broker
     private final String clientId = config.getValue("mqtt.broker.clientId",String.class); // Cliend ID for the connection
 
-    @PostConstruct
+    @PostConstruct // annotate the function to be started on launch with post construct. this function will connect on the broker.
     public void start() {
         System.out.println("Connecting to the MQTT broker...: ");
 

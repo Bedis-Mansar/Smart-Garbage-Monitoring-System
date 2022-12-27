@@ -31,4 +31,5 @@ public class SensorJSONDecoder implements Decoder.Text<Sensor>{
             return false;
         }
     }
+
 }

@@ -9,7 +9,7 @@ import java.util.Objects;
 
 @Entity
 @JsonbVisibility(FieldPropertyVisibilityStrategy.class)
-public class Sensor implements Serializable  {
+public class Sensor implements Serializable  { // Sensor entity for MQTT messages
     @Id
     private String id;
 
