@@ -9,12 +9,12 @@ import java.util.Objects;
 
 @Entity
 @JsonbVisibility(FieldPropertyVisibilityStrategy.class)
-public class Sensor implements Serializable  { // Sensor entity for MQTT messages
+public class Sensor implements Serializable  { // Sensor entity for MQTT messages. This entity will be used to broadcast sensor data on websocket
     @Id
-    private String id;
+    private String id; //Sensor ID
 
     @Column
-    private Double value;
+    private Double value; //Value from the Hc-SR04 Ultrasonic sensor which represents the distance between the sensor and the waste.
 
     public Sensor() {
     }
@@ -26,7 +26,7 @@ public class Sensor implements Serializable  { // Sensor entity for MQTT message
     }
 
 
-
+//Getters
     public String getId() {
         return id;
     }

@@ -26,10 +26,10 @@ public class SignUpEndpoint {
     private UserRepository repository;
     @POST // Post method that receives User credentials from sign up in JSON format and saves it in the database
     public void save(User user) {
+
         String password=user.getpassword();
         String passwordhash=Argon2Utility.hash(password.toCharArray()); // Hash the password tapped by the user before saving it in the database
         User userhash=new User(user.getName(),passwordhash,user.getPermissionLevel()); //create new User entity with the new hashed password
-
         repository.save(userhash); // save the data in MongoDB
     }
 }

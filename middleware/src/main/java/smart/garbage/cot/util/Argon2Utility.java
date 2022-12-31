@@ -22,5 +22,12 @@ public class Argon2Utility { //Storing password directly into the database is da
             argon2.wipeArray(clientHash);
         }
     }
+    public static boolean check(String dbHash, char[] clientHash) { //Used to authenticate the user, taking his password and the hashed password in the database as input
+        try {
+            return argon2.verify(dbHash, clientHash); //verifies the password against the argon hash stored for the user
+        } finally {
+            argon2.wipeArray(clientHash);
+        }
+    }
 
 }
