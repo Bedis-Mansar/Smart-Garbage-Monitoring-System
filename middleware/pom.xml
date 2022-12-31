@@ -13,6 +13,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jakarta.nosql.version>1.0.0-b2</jakarta.nosql.version>
+        <argon2.jvm.version>2.11</argon2.jvm.version>
     </properties>
     <dependencies>
     <dependency>
@@ -45,6 +46,11 @@
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20220924</version>
+        </dependency>
+        <dependency>
+            <groupId>de.mkammerer</groupId>
+            <artifactId>argon2-jvm</artifactId>
+            <version>${argon2.jvm.version}</version>
         </dependency>
     </dependencies>
     <build>
