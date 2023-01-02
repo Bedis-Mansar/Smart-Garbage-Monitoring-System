@@ -12,8 +12,9 @@ import java.util.Objects;
 @JsonbVisibility(FieldPropertyVisibilityStrategy.class)
 public class User implements Serializable, Identity { // User entity for database
     @Id
-    private String username;
-
+    private String mail; //email address
+    @Column
+    private String fullname;
     @Column
     private String password;
     @Column
@@ -23,16 +24,20 @@ public class User implements Serializable, Identity { // User entity for databas
     public User() {
     }
 
-    public User(String username, String password,Long permissionLevel) {
-        this.username=username;
+    public User(String mail, String fullname, String password,Long permissionLevel) {
+        this.mail=mail;
+        this.fullname=fullname;
         this.password = password;
         this.permissionLevel=permissionLevel;
     }
 
 
 
-    public String getusername() {
-        return username;
+    public String getmail() {
+        return mail;
+    }
+    public String getfullname() {
+        return fullname;
     }
     public String getpassword() {
         return password;
@@ -55,23 +60,23 @@ public class User implements Serializable, Identity { // User entity for databas
             return false;
         }
         User user = (User) o;
-        return Objects.equals(username, user.username);
+        return Objects.equals(mail, user.mail);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(username);
+        return Objects.hashCode(mail);
     }
     @Override
     public String getName() {
-        return getusername();
+        return getmail();
     }
 
     @Override
     public String toString() {
-        return "Sensor{" +
-                "id='" + username + '\'' +
-                ", value=" + password +
+        return "User{" +
+                "id='" + mail + '\'' +
+                ", fullname=" + fullname+
 
                 '}';
     }

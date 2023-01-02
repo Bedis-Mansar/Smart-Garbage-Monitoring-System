@@ -24,12 +24,20 @@ public class SignUpEndpoint {
 
     @Inject
     private UserRepository repository;
-    @POST // Post method that receives User credentials from sign up in JSON format and saves it in the database
-    public void save(User user) {
 
-        String password=user.getpassword();
-        String passwordhash=Argon2Utility.hash(password.toCharArray()); // Hash the password tapped by the user before saving it in the database
-        User userhash=new User(user.getName(),passwordhash,user.getPermissionLevel()); //create new User entity with the new hashed password
-        repository.save(userhash); // save the data in MongoDB
+    @POST // Post method that receives User credentials from sign up in JSON format and saves it in the database
+    public Response save(User user) {
+        try {
+            repository.findById(user.getmail()).orElseThrow(); // If User already exists , the request cannot go through
+            return Response.status(Response.Status.UNAUTHORIZED).entity("{\"message\":\"user already exists!!!\"}").build();
+        } catch (Exception e) {
+            String password = user.getpassword();
+            String passwordhash = Argon2Utility.hash(password.toCharArray()); // Hash the password tapped by the user before saving it in the database
+            User userhash = new User(user.getmail(), user.getfullname(), passwordhash, user.getPermissionLevel()); //create new User entity with the new hashed password
+            repository.save(userhash); // save the data in MongoDB
+            return Response.ok().entity("{\"username created \":\"" + userhash.getfullname() + "\"}").build();
+        }
+
+
     }
 }
