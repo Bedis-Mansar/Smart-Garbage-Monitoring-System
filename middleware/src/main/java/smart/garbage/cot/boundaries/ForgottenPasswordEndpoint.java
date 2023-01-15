@@ -57,6 +57,18 @@ public class ForgottenPasswordEndpoint {
             throw new RuntimeException(e);
         }
     }
+    @POST
+    @Path("/{code}") // the user then sends the verification code alongside a new password
+    public Response Respond(@PathParam("code") String code) {//
+        if (verifcodes.containsKey(code)) {//if the verification code exists in the hashmap
+            return Response.ok().entity("{\"Correct verification code! \":\"" + code + "\"}").build();
+
+
+        } else {
+            return Response.status(Response.Status.UNAUTHORIZED).entity("{\"message\":\"wrong verification code!!!\"}").build();
+
+        }
+    }
 
     @POST
     @Path("/{code}/{password}") // the user then sends the verification code alongside a new password

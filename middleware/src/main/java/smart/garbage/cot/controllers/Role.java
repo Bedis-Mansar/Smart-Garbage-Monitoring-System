@@ -2,7 +2,7 @@ package smart.garbage.cot.controllers;
 
 public enum Role {   //Different roles for the user which are defined by a permsision value
     Surfer(1L),   // regular user
-    Administrator(1L<<2L); // administrator of the application
+    Administrator(2L); // administrator of the application
 
     private final long value;
     Role(long value){
