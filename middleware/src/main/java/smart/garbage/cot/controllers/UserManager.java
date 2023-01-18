@@ -25,6 +25,14 @@ public class UserManager {
         throw new EJBException("Failed sign in with mail: " + mail + " [Unknown mail or wrong password]");
 
     }
+    public User authenticateadmin(final String mail, final String password) throws EJBException {// authentication for admin dashboard
+        final User user = userRepository.findById(mail).orElseThrow();
+        if(user != null && Argon2Utility.check(user.getpassword(), password.toCharArray()) && user.getPermissionLevel().equals(2L)){ //check the permission
+            return user;
+        }
+        throw new EJBException("Failed sign in with mail: " + mail + " [Unknown mail or wrong password]");
+
+    }
 
 
 }
