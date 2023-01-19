@@ -16,6 +16,7 @@ smart\garbage\cot\util\Identity.class
 smart\garbage\cot\repositories\UserRepository.class
 smart\garbage\cot\boundaries\SensorJSONEncoder.class
 smart\garbage\cot\boundaries\SensorDBEndpoint.class
+smart\garbage\cot\util\AuthorizationFilter.class
 smart\garbage\cot\util\OAuth2PKCE.class
 smart\garbage\cot\boundaries\HelloWorld.class
 smart\garbage\cot\util\Argon2Utility.class
