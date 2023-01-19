@@ -6,6 +6,7 @@ smart\garbage\cot\entities\Sensor.class
 smart\garbage\cot\entities\User.class
 smart\garbage\cot\entities\FieldPropertyVisibilityStrategy.class
 smart\garbage\cot\controllers\Role.class
+smart\garbage\cot\util\AuthenticationFilter.class
 smart\garbage\cot\boundaries\SignUpEndpoint.class
 smart\garbage\cot\boundaries\ProfileEndpoint.class
 smart\garbage\cot\JaxRSActivator.class

@@ -15,6 +15,7 @@ C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\bou
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\boundaries\PublishWebsocketEndpoint.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\entities\Sensor.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\entities\SensorDB.java
+C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\util\AuthenticationFilter.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\controllers\MqttMessageEventManager.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\entities\User.java
 C:\Users\bedis\Desktop\projet cot\middleware\src\main\java\smart\garbage\cot\util\Identity.java
