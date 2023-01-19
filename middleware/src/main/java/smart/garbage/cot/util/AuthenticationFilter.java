@@ -32,7 +32,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {// Authenti
     public final static String authenticateadminPath = "/api/authenticateadmin/";
     public final static String tokenPath = "/api/oauth/token";
     public final static String personpath= "/api/user";
-    public final static String forgottenpasswordpath= "/api/mail";
+    public final static String forgottenpasswordpath= "/api/mail/";
 
 
 
@@ -41,7 +41,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {// Authenti
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
         String authorizationHeader = containerRequestContext.getHeaderString(HttpHeaders.AUTHORIZATION); // get the access token from the authorization header
         final String path = containerRequestContext.getUriInfo().getRequestUri().getPath(); // get path of the request
-        if(path.equals(authorizePath)||path.equals(tokenPath)||path.equals(authenticatePath)||path.equals(personpath)||path.equals(authenticateadminPath)||path.equals(forgottenpasswordpath)){
+        if(path.equals(authorizePath)||path.contains(tokenPath)||path.equals(authenticatePath)||path.equals(personpath)||path.equals(authenticateadminPath)||path.contains(forgottenpasswordpath)){
             return; // if the request path is equal to the signin or signup paths, the request is allowed  without an access token
         }
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) { // access tokens  are sent in the headers with a prefix of Bearer
