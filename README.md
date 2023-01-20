@@ -14,11 +14,15 @@ Therefore, to facilitate their job of safeguarding the environment, our project 
 - Detect, display the level of waste in garbage cans and emphasize on garbage bins that exceed the threshhold.
 - Provide the optimal path to clear the garbage cans.
 
+## Demo
+
+The mobile application can be tested with the apk located in the "APK" folder. The admin dashbboard is currently hosted on https://smartgarbagecot.me. You can view a demo of the mobile application [here](https://www.canva.com/design/DAFYN69sjlA/acsfiw305thY1z000dnFDw/watch?utm_content=DAFYN69sjlA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton&fbclid=IwAR1izz-2TqcPLJdtSKw7uBJ-D_Sq6kGSzvsrfyzuvgEHQB4Tw-xHEeGGvFQ).
+
 ## Technologies
 
 These are the technologies necessary to run this project:
-- wildfly preview 26.1.2 final
-- jdk 17.0.2
+- Wildfly preview 26.1.2 final
+- JDK 17.0.2
 - Flutter
 - Node-red
 - Mosquitto Broker
@@ -46,3 +50,13 @@ the middleware, the mosquitto broker and the database. The virtual machine have 
 - Ram: 4 Gib
 - vCPUS: 2
 - Resource disk size: 8 Gib
+
+## Certifications and grading
+
+We have enabled HTTPS with letsencrypt TLS certificate with HSTS enabled as well, ensuring only secure connections are allowed to the middleware. 
+Enabling TLS1.2 only on Wildfly helps generate A+ grading on SSlabs.
+![Alt text](./imgs/tls1.2.PNG)
+When enabling only TLS1.3 , even though it is more secure, it only generates A grading which is due to SSlabs grading system that does not rate servers with TLS1.3 only as A+. 
+![Alt text](./imgs/TLS1.3.PNG)
+Enabling TLS1.3 and TLS1.2 generates an A grading, because SSlabs rates that the server is now vulnerable to a downgrade attack. SSlab only rates servers with TLS1.3 as A+ if they
+support TLS Fallback Signaling Cipher Suite Value to prevent the downgrade attack. However, JBOSS wildfly does not provide its own SSL implementation. Wildfly relies on the SSL implementation by the JVM. Currently, this functionality has not been added Oracle JDK or OpenJDK.
