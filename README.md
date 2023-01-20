@@ -41,7 +41,7 @@ The installation steps are well explained in the user guide in "docs" directory.
 - Create a JWT keystore as mentionned in the user guide and store it in jboss configuration directory.
 - package the middleware code into a single.war file with Intellij and place in wildfly/standalone/deployments folder.
 - Use "standalone.bat" to run wildfly
-- Copy the apk and install it on your phone to test the phone.
+- Copy the apk and install it on your phone to test the mobile application.
 - Test the dashboard in localhost:8080
 
 ## Deployment machine
