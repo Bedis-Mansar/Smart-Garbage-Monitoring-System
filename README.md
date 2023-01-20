@@ -16,7 +16,7 @@ Therefore, to facilitate their job of safeguarding the environment, our project 
 
 ## Demo
 
-The mobile application can be tested with the apk located in the "APK" folder. The admin dashbboard is currently hosted on https://smartgarbagecot.me. You can view a demo of the mobile application [here](https://www.canva.com/design/DAFYN69sjlA/acsfiw305thY1z000dnFDw/watch?utm_content=DAFYN69sjlA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton&fbclid=IwAR1izz-2TqcPLJdtSKw7uBJ-D_Sq6kGSzvsrfyzuvgEHQB4Tw-xHEeGGvFQ).
+The mobile application can be tested with the apk located in the "APK" folder. The admin dashbboard is currently hosted on https://smartgarbagecot.me. You can view a demo of the mobile application [here](https://www.canva.com/design/DAFYN69sjlA/acsfiw305thY1z000dnFDw/watch?utm_content=DAFYN69sjlA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton&fbclid=IwAR1izz-2TqcPLJdtSKw7uBJ-D_Sq6kGSzvsrfyzuvgEHQB4Tw-xHEeGGvFQ). You can also view a demo of the dashboard [here](https://drive.google.com/file/d/1Gpr57gZQIEIqmYAiYIF9rU8O_P6n51QC/view?usp=sharing).
 
 ## Technologies
 
@@ -59,4 +59,4 @@ Enabling TLS1.2 only on Wildfly helps generate A+ grading on SSlabs.
 When enabling only TLS1.3 , even though it is more secure, it only generates A grading which is due to SSlabs grading system that does not rate servers with TLS1.3 only as A+. 
 ![Alt text](./imgs/TLS1.3.PNG)
 Enabling TLS1.3 and TLS1.2 generates an A grading, because SSlabs rates that the server is now vulnerable to a downgrade attack. SSlab only rates servers with TLS1.3 as A+ if they
-support TLS Fallback Signaling Cipher Suite Value to prevent the downgrade attack. However, JBOSS wildfly does not provide its own SSL implementation. Wildfly relies on the SSL implementation by the JVM. Currently, this functionality has not been added Oracle JDK or OpenJDK.
+support TLS Fallback Signaling Cipher Suite Value to prevent the downgrade attack. However, JBOSS wildfly does not provide its own SSL implementation. Wildfly relies on the SSL implementation by the JVM. Currently, this functionality has not been added in Oracle JDK or OpenJDK.
