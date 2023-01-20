@@ -42,7 +42,7 @@ The installation steps are well explained in the user guide in "docs" directory.
 - package the middleware code into a single.war file with Intellij and place in wildfly/standalone/deployments folder.
 - Use "standalone.bat" to run wildfly
 - Copy the apk and install it on your phone to test the mobile application.
-- Test the dashboard in localhost:8080
+- Test the dashboard which is situated in middleware/WEB-INF in localhost:8080
 
 ## Deployment machine
 
