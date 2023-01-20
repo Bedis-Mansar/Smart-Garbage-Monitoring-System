@@ -1,0 +1,51 @@
+[
+    {
+        "id": "215e8b29a1b09380",
+        "type": "mqtt in",
+        "z": "086c362268dc8094",
+        "name": "",
+        "topic": "test",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "8e820ccde0cc9316",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [
+                "28c77c9611501edc"
+            ]
+        ]
+    },
+    {
+        "id": "8e820ccde0cc9316",
+        "type": "mqtt-broker",
+        "name": "mqtt",
+        "broker": "wss://mqtt.smartgarbagecot.me:8083",
+        "port": "1883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "test",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
