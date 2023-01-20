@@ -25,7 +25,7 @@ public class AuthorizationFilter implements ContainerRequestFilter { // The auth
     public void filter(ContainerRequestContext requestContext) {
         Method method = resourceInfo.getResourceMethod();
         final String path = requestContext.getUriInfo().getRequestUri().getPath();
-        if(path.equals(authorizePath)||path.equals(tokenPath)||path.equals(authenticatePath)||path.equals(personpath)||path.equals(authenticateadminPath)||path.contains(forgottenpasswordpath)){
+        if(path.equals(authorizePath)||path.contains(tokenPath)||path.equals(authenticatePath)||path.equals(personpath)||path.equals(authenticateadminPath)||path.contains(forgottenpasswordpath)){
             return; // if the request path is equal to the signin or signup paths, the request is allowed  without an access token
         }
 
