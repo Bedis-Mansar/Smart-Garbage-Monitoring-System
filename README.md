@@ -34,6 +34,7 @@ These are the technologies necessary to run this project:
 
 ## Installation Guide
 
+The installation steps are well explained in the user guide in "docs" directory. To run this application locally:  
 - Clone this repository
 - Import flows.json located in "IOT" on Node-red.
 - Create a microprofile-properties.config folder in middleware/META-INF folder as indicated in the user guide.
